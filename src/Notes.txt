@@ -1,0 +1,13 @@
+1)  Create the models
+2)  Then methods to query, delete etc,
+3)  Then move on to schemeas before anything else
+
+4)Using diesel to create a db
+DATABASE_URL="/path/to/db" >.env //pipe into the envronment variable //if 'db' doesn't exist then it'll create it
+
+5)create a migration to our database using 'diesel migration run'
+
+6) up.sql table needs to be dropped by the down.sql (basically undo everything the up.sql file does )
+
+7) get your schemea needed for you data using command
+diesel print-scheme >file to pipe into.rs
