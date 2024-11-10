@@ -1,3 +1,4 @@
-/migrations
-/src/Notes.txt
-/target
+migrations
+src/Notes.txt
+target
+.env
