@@ -1,4 +1,4 @@
 migrations/
+target/
 src/Notes.txt
-target
 *.env
