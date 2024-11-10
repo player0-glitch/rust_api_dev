@@ -1,11 +1,11 @@
 // @generated automatically by Diesel CLI.
-
 diesel::table! {
-    albums (id) {
-        id -> Nullable<Integer>,
-        artist -> Text,
-        release_year -> Integer,
-        sales -> Integer,
-        released -> Bool,
+    albums (id){
+        id->Integer,
+        artist->Text,
+        year->Integer,
+        name ->Text,
+        is_released -> Bool
     }
+    
 }

@@ -1,0 +1,9 @@
+-- Your SQL goes here
+CREATE TABLE albums (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	artist VARCHAR NOT NULL,
+  name TEXT NOT NULL,
+	year INTEGER NOT NULL,
+	is_released BOOL NOT NULL DEFAULT 0
+)
+

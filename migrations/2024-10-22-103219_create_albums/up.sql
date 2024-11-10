@@ -1,8 +1,0 @@
--- Your SQL goes here
-CREATE TABLE albums (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  artist TEXT NOT NULL UNIQUE,
-  release_year INTEGER NOT NULL,
-  sales INTEGER NOT NULL,
-  released BOOLEAN NOT NULL DEFAULT 'f'
-);

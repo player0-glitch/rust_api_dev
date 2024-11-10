@@ -1,17 +1,23 @@
 #[macro_use]
 extern crate diesel;
-
 #[macro_use]
-extern crate diesel_codegen;
 extern crate dotenv;
 
+//allows us to use environment variables
+use std::env;
 
-use std::env;   //this exposes the environment variable to our workspace
+use diesel::{Connection, SqliteConnection};
 use dotenv::dotenv;
 
-mod models;
 mod schema;
+mod model;
 
+pub fn establish_connection()->SqliteConnection{
+    dotenv().ok();
+
+    let db_url=env::var("DATABASE_URL").expect("DATABASE_URL needs to be set");
+        SqliteConnection::establish(&db_url).unwrap_or_else(|_| panic!("Cannot Connect to database at {}",db_url))
+}
 fn main(){
     println!("Hello World");
 }
